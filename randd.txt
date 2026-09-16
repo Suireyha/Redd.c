@@ -1,0 +1,5 @@
+BIND this "Hello";
+PRINT this;
+BIND me 3 + 5;
+PRINT me;
+END;

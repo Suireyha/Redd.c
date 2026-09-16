@@ -5,14 +5,18 @@
 
 int main(int argc, char** args){
 
-    printf("%d", argc);
+    printf("Arguments:\t%d\n", argc);
     if(argc != 2){ //For now, take in exactly one file
-        printf("Usage: Redd <filePath.txt>");
+        printf("Usage: Redd <filePath.txt>\n");
         return 0;
     }
 
-    //char* filename = args[2];
-    //FILE* codeFile
+    FILE* codeFile;
+    codeFile = fopen(args[1], "r");
+    if(codeFile == NULL){
+        printf("Error openning file :(\n");
+        return 0;
+    }
 
     return 0;
 }
